@@ -13,7 +13,7 @@ function App() {
       <div className={"d-flex align-items-center"}>
           <div className="container d-flex flex-column container  align-items-center" style={{backgroundColor:"#7071E8",border:'2px solid #8DDFCB',padding:'2rem',borderRadius:'90px'}}>
               <div>
-                  <h1 style={{color:'#ECEE81'}}><FontAwesomeIcon icon={faCandyCane} /> Sayı Tahmin Oyuna Hoşgeldiniz.. <FontAwesomeIcon icon={faCandyCane} /></h1>
+                  <h1 style={{color:'#ECEE81'}}><FontAwesomeIcon icon={faCandyCane}/> Sayı Tahmin Oyuna Hoşgeldiniz! <FontAwesomeIcon icon={faCandyCane} /></h1>
               </div>
               <div>
                   <button className={<button type="button"></button>} onClick={handleClick} style={{backgroundColor:'#8DDFCB',color:'#ED9ED6',border:'2px solid #ED9ED6',padding:'5px'}}><FontAwesomeIcon icon={faShoePrints} /> <b>Adım atmak için tıklayınız.</b> <FontAwesomeIcon icon={faShoePrints} /></button>
