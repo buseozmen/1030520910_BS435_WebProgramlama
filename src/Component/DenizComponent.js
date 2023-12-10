@@ -26,7 +26,7 @@ function DenizComponent(props) {
             <div style={{display:"flex",justifyContent:"center"}}><p style={{color:"#ACFADF",fontSize:"18px"}}><img width="30" height="30" src="https://img.icons8.com/ios/50/captain.png" alt="captain"/> <strong>Kaptan : {userName}</strong> </p></div>
             <div style={{marginTop:"2rem",display:"flex",justifyContent:"center",width:"800px"}}><p style={{color:"#ACFADF",fontSize:"18px"}}>Her şeyin yolunda gittiği bir deniz yolculuğu sırasında, denizaltına aniden bir cisim çarpması sonucu mürettebatınız panikledi.
                 Bunun üzerine denizaltı kaptanı {userName} olarak keşif için denizaltından ayrıldınız. Fakat işlerin ters gitmesi sonucu denizlatı ile olan bağlantınız koptu. Denizin derinliklerinde artık tamamen yalnız ve savunmasızsınız. Oksijen tüpünüzdeki oksijen bitmeden deniz altını bulmak zorundasınız. Neyseki Kaptan Kol Bilgisayarınız yanınızda. Eğer doğru kodu girerseniz denizaltına sizi bulması için sinyal gönderecek.
-                Toplamda 100 saniyeniz var. Şansını dene ya da denizin derinliklerinde tamamen kaybol. Tercihini yap ! Tamam mı ? Devam mı ?</p>
+                Toplamda 100 saniyeniz var. Şansını dene ya da denizin derinliklerinde tamamen kaybol. Tercihini yap ! Tamam mı ? Devam mı?</p>
             </div>
             <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",marginTop:"2rem"}}>
                 <button onClick={handleTamamClick} style={{color:"#0766AD",backgroundColor:"#ACFADF",border:"4px solid #0766AD",padding:"0.5rem 3rem",marginRight:"3rem"}}><b>TAMAM.</b></button>
