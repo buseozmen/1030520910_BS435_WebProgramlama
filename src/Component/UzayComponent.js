@@ -11,13 +11,13 @@ function UzayComponent(props) {
     const navigate = useNavigate();
 
     const handleTamamClick = () => {
-        // Yönlendirme işlemi burada gerçekleştirilecek
-        navigate('/'); // Yönlendirilecek sayfanın yolunu belirtin
+
+        navigate('/');
     };
 
     const handleDevamClick = () => {
-        // Yönlendirme işlemi burada gerçekleştirilecek
-        navigate('/uzay/uzay_oyun', { state: { userName } }); // Yönlendirilecek sayfanın yolunu belirtin
+
+        navigate('/uzay/uzay_oyun', { state: { userName } });
     };
     return(
         <div style={{height: "100vh",width: "100%",backgroundImage:`url(${uzayResmi})`,backgroundSize: 'cover',display:"flex",flexDirection:"column",alignItems:"center"}}>

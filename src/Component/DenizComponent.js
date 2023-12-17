@@ -12,13 +12,13 @@ function DenizComponent(props) {
     const navigate = useNavigate();
 
     const handleTamamClick = () => {
-        // Yönlendirme işlemi burada gerçekleştirilecek
-        navigate('/'); // Yönlendirilecek sayfanın yolunu belirtin
+
+        navigate('/');
     };
 
     const handleDevamClick = () => {
-        // Yönlendirme işlemi burada gerçekleştirilecek
-        navigate('/deniz/deniz_oyun', { state: { userName } }); // Yönlendirilecek sayfanın yolunu belirtin
+
+        navigate('/deniz/deniz_oyun', { state: { userName } });
     };
     return(
         <div style={{height: "100vh",width: "100%",backgroundImage:`url(${deepSea})`,backgroundSize: 'cover',display:"flex",flexDirection:"column",alignItems:"center"}}>
