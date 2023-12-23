@@ -16,7 +16,7 @@ function UzayOyun() {
     const [userGuess, setUserGuess] = useState('');
     const [distance, setDistance] = useState(null);
     const [oxygenLevel, setOxygenLevel] = useState(100);
-    const [popup , setPopup] = useState(false);
+    const [kazanKaybet , setKazanKaybet] = useState(false);
     const [oyunbitti, setOyunbitti] = useState("");
     const navigate = useNavigate();
 
@@ -24,17 +24,17 @@ function UzayOyun() {
     const handleGuess = (event) => {
         event.preventDefault();
         const userNumber = parseInt(userGuess);
-                if ((!isNaN(userNumber) )&& (popup=== false)) {
+                if ((!isNaN(userNumber) )&& (kazanKaybet=== false)) {
                     const newDistance = Math.abs(userNumber - randomNumber);
                     setDistance(newDistance);
                     if(newDistance===0){
-                        setPopup(true);
+                        setKazanKaybet(true);
                         setOyunbitti("Tebrikler! Doğru sinyal kodunu buldun. Uzay gemisine sinyal gönderildi. Birazdan burada olurlar..")
                     }else{
                         const newOxygenLevel = oxygenLevel - 20;
                         setOxygenLevel(newOxygenLevel);
                         if ((newOxygenLevel === 0) ) {
-                            setPopup(true);
+                            setKazanKaybet(true);
                             setOyunbitti("Maalesef oksijeniniz bitti ve öldünüz..")
                         }
                     }
@@ -50,7 +50,7 @@ function UzayOyun() {
     };
     return(
         <div style={{ height: "100vh",width: "100%",backgroundImage:`url(${uzayResmi})`,backgroundSize: 'cover',display:"flex",flexDirection:"column",alignItems:"center"}}>
-            <div>{popup ? <div style={{
+            <div>{kazanKaybet ? <div style={{
                 display:"flex",
                 flexDirection:"column",
                 alignItems:"center",

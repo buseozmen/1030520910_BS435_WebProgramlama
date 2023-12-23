@@ -13,8 +13,7 @@ function DenizOyun(props) {
     const [userGuess, setUserGuess] = useState('');
     const [distance, setDistance] = useState(null);
     const [oxygenLevel, setOxygenLevel] = useState(100);
-    const [popup , setPopup] = useState(false);
-    const [d ,setd]=useState("false");
+    const [kazanKaybet , setKazanKaybet] = useState(false);
     const [oyunbitti, setOyunbitti] = useState("");
     const navigate = useNavigate();
 
@@ -27,8 +26,7 @@ function DenizOyun(props) {
 
             }
             else{
-                setPopup(true);
-                setd("true");
+                setKazanKaybet(true);
                 setOyunbitti("Maalesef oksijeniniz bitti ve boğuldunuz..");
             }
 
@@ -39,24 +37,22 @@ function DenizOyun(props) {
     const handleGuess = (event) => {
         event.preventDefault();
         const userNumber = parseInt(userGuess);
-        if ((!isNaN(userNumber) )&& (!popup)) {
+        if ((!isNaN(userNumber) )&& (!kazanKaybet)) {
             const newDistance = Math.abs(userNumber - randomNumber);
             setDistance(newDistance);
 
             if((newDistance===0 ) ){
-                setPopup(true);
-                setd("true");
+                setKazanKaybet(true);
                 setOyunbitti("Tebrikler! Doğru sinyal kodunu buldun. Deniz altına sinyal gönderildi. Birazdan burada olurlar..");
                 //doğru bildin
 
             }else if((oxygenLevel === 0)){
-                setPopup(true);
-                setd("true");
+                setKazanKaybet(true);
                 setOyunbitti("Maalesef oksijeniniz bitti ve boğuldunuz..");
                 //yanlış bildin
             }
         }
-
+        //setUserGuess('');
     };
     const handleInputChange = (event) => {
         setUserGuess(event.target.value);
@@ -68,7 +64,7 @@ function DenizOyun(props) {
     return(
 
         <div style={{ height: "100%",width: "100%",backgroundImage:`url(${deepSea})`,backgroundSize: 'cover',display:"flex",flexDirection:"column",alignItems:"center"}}>
-           <div>{popup ? <div style={{
+           <div>{kazanKaybet ? <div style={{
                display:"flex",
                flexDirection:"column",
                alignItems:"center",
