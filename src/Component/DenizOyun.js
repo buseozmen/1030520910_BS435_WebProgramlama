@@ -37,6 +37,7 @@ function DenizOyun(props) {
     const handleGuess = (event) => {
         event.preventDefault();
         const userNumber = parseInt(userGuess);
+        
         if ((!isNaN(userNumber) )&& (!kazanKaybet)) {
             const newDistance = Math.abs(userNumber - randomNumber);
             setDistance(newDistance);
